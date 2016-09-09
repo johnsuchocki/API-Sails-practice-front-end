@@ -1,0 +1,42 @@
+<ol class="breadcrumb">
+    <li class="active">Home</a></li>
+</ol>
+
+<br/>
+
+<%- partial ('partials/statusmessage.ejs') %>
+
+<h2>Customers</h2>
+<table class="table table-striped table-bordered">
+  <tr>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Phone Number</th>
+	<th>Email</th>
+    <th>Assests</th>
+	<th>Fee Rate</th>
+    <th>Active</th>
+  </tr>
+  <% if(typeof customers != "undefined" && customers.length > 0){ %>
+    <% customers.forEach(function(customer){ %>
+      <tr>
+        <td><%= customer.id %></td>
+        <td><%= customer.firstName %></td>
+        <td><%= customer.lastName %></td>
+        <td><%= customer.phoneNumber %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.assets %></td>
+        <td><%= customer.feeRate %></td>
+        <td><%= customer.active %></td>
+      </tr>
+    <% }) %>
+  <% }else{ %>
+      <tr>
+        <td colspan="8">0 records found</td>
+      </tr>
+  <% } %>
+  
+</table>
+
+

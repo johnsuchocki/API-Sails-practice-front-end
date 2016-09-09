@@ -1,0 +1,74 @@
+<ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li class="active">Update Customer</a></li>
+</ol>
+
+<br/>
+<%- partial ('partials/statusmessage.ejs') %>
+
+<h2>Update Customer</h2>
+<form action="/update" method="POST" class="form-horizontal">
+  <div class="form-group">
+	<label for="id" class="col-sm-2 control-label">ID</label>
+	<div class="col-sm-10">
+	  <input type="text" class="form-control" id="id" name="id" placeholder="ID">
+	</div>
+  </div>
+  <div class="form-group">
+    <label for="firstName" class="col-sm-2 control-label">First Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="lastName" name="lastName"  placeholder="Last Name">
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="phoneNumber" class="col-sm-2 control-label">Primary Phone</label>
+    <div class="col-sm-10">
+      <input type="phone" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="###-###-####">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="email" class="col-sm-2 control-label">Email Address</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="email" name="email" placeholder="customer@example.com">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="assets" class="col-sm-2 control-label">Current Assets</label>
+    <div class="col-sm-10">
+      <input type="number" step="any" class="form-control" id="assets" name="assets" placeholder="0.00">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="feeRate" class="col-sm-2 control-label">Fee Rate</label>
+    <div class="col-sm-10">
+      <input type="number" step="any" class="form-control" id="feeRate" name="feeRate" placeholder="0.000">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="radio">
+        <label>
+          <input type="radio" name="active" id="active1" value="1" checked>
+          Active
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="active" id="active2" value="0">
+          Inactive
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Update Customer</button>
+    </div>
+  </div>
+</form>
